@@ -6,6 +6,7 @@
 - RSpec *=> Testing Tool*
 - Cocoon *=> For dinamically creating Form Partials.*
 - Cocoon-Vanilla-JS *=> To avoid the installation of jQuery for only one dependency.*
+- Bootstrap 5 *=> To add some basic style*
 
 ## Usage
 
