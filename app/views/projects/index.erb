@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="d-flex align-items-center justify-content-center flex-column">
+    <h1 class="mb-5"> Projects </h1>
+    <% unless @projects.first.nil? %>
+      <div class="accordion w-100" id="accordion">
+        <% @projects.each do |project| %>
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="<%= project.id %>">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= project.id %>" aria-expanded="false" aria-controls="collapse<%= project.id %>">
+                <%= project.name %>
+              </button>
+            </h2>
+            <div id="collapse<%= project.id %>" class="accordion-collapse collapse" aria-labelledby="<%= project.id %>" data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <div class="row row-cols-4 g-2">
+
+                  <% project.tasks.each do |task|%>
+
+                    <div class="col-3">
+                      <div class="card">
+                        <div class="card-body d-flex flex-column">
+                          <p class="card-text"><%= task.description %></p>
+                          <a href="#" id="task-btn" data-id="<%= task.id %>" data-status="<%= task.completed %>" class="btn btn-primary justify-self-center">Done</a>
+                        </div>
+                      </div>
+                    </div>
+
+                  <% end %>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <div>
+        <h3>
+          There are no Projects set up.
+        </h3>
+      </div>
+    <% end %>
+  </div>
+</div>
