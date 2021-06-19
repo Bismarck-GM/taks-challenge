@@ -6,3 +6,5 @@ require 'faker'
     @template.tasks.create(description: Faker::TvShows::BigBangTheory.quote)
   end
 end
+
+puts "Seeded #{Template.count} templates."
