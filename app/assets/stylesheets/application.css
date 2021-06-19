@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ html {
+   box-sizing: border-box;
+ }
+
+ body {
+   /* background-color: rgb(151, 151, 151); */
+   min-height: calc(100vh);
+   background: linear-gradient(127.78deg, rgba(250, 0, 255, 0.28) -1.09%, rgba(82, 0, 255, 0.35) 0.25%, rgba(0, 71, 255, 0.35) 2.16%, rgba(227, 225, 233, 0.35) 7.39%), #FFFFFF;
+
+ }
